@@ -33,6 +33,8 @@ public class CoffeeMaker
         this.inventory.setCoffee(MAX_INVENTORY);
         this.inventory.setMilk(MAX_INVENTORY);
         this.inventory.setSugar(MAX_INVENTORY);
+        
+        
     }
 
     /**
@@ -105,9 +107,14 @@ public class CoffeeMaker
     {
         for (int i = 0; i < this.recipeArray.size(); i++)
         {
-            if (this.recipeArray.get(i).getRecipeName().equalsIgnoreCase(recipeName))
+            Recipe recipeToUse = this.recipeArray.get(i);
+            if (recipeToUse.getRecipeName().equalsIgnoreCase(recipeName))
             {
+                recipeToUse.getCoffeeLevel();
+                recipeToUse.getMilkLevel();
+                recipeToUse.getSugarLevel();
                 // repipe found, decrement inventory 
+                
                 this.inventory.getCoffee();
             }
         }
