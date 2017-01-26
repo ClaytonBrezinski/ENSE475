@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package ense475lab1;
-
+import java.util.ArrayList;
 /**
  * Author: tdouglas
  */
@@ -18,7 +18,7 @@ public class CoffeeMaker
 
     public static final int MAX_NUM_RECIPES = 4; // Maximum number of recipes
     public static final int MAX_INVENTORY = 20;
-    private Recipe[] recipeArray; // This is the array of recipes
+    private ArrayList<Recipe> recipeArray; // This is the array of recipes
     private int numRecipes = 0;
     private Inventory inventory; // This is our inventory in the coffee maker
 
@@ -29,7 +29,7 @@ public class CoffeeMaker
     public CoffeeMaker()
     {
         //Setup inventory
-
+        this.inventory = new Inventory();
     }
 
     /**
@@ -50,9 +50,7 @@ public class CoffeeMaker
      */
     public boolean addRecipe(Recipe rAdd)
     {
-
         return false;
-
     }
 
     /**
@@ -63,7 +61,13 @@ public class CoffeeMaker
      */
     public Recipe getRecipe(String recipeName)
     {
-
+        for (int i = 0; i < this.recipeArray.size(); i++)
+        {
+            if (this.recipeArray.get(i).getRecipeName().equalsIgnoreCase(recipeName))
+            {
+                return this.recipeArray.get(i);
+            }
+        }
         return null;
     }
 
@@ -75,7 +79,6 @@ public class CoffeeMaker
      */
     public boolean deleteRecipe(String recipeName)
     {
-
         return false;
     }
 
@@ -87,7 +90,6 @@ public class CoffeeMaker
      */
     public boolean makeCoffee(String recipeName)
     {
-
         return false;
     }
 

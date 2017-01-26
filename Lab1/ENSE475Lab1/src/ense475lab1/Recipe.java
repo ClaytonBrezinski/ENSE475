@@ -35,7 +35,6 @@ public class Recipe
         this.milkLevel = milkLevel;
         this.sugarLevel = sugarLevel;
         this.coffeeLevel = coffeeLevel;
-
     }
 
     /**
