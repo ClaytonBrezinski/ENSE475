@@ -79,6 +79,14 @@ public class CoffeeMaker
      */
     public boolean deleteRecipe(String recipeName)
     {
+        for (int i = 0; i < this.recipeArray.size(); i++)
+        {
+            if (this.recipeArray.get(i).getRecipeName().equalsIgnoreCase(recipeName))
+            {
+                this.recipeArray.remove(i);
+                return true;
+            }
+        }
         return false;
     }
 
