@@ -21,7 +21,6 @@ public class Inventory
      */
     public Inventory()
     {
-
         milk = 0;
         coffee = 0;
         sugar = 0;

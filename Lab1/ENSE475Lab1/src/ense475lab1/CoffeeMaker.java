@@ -30,6 +30,9 @@ public class CoffeeMaker
     {
         //Setup inventory
         this.inventory = new Inventory();
+        this.inventory.setCoffee(MAX_INVENTORY);
+        this.inventory.setMilk(MAX_INVENTORY);
+        this.inventory.setSugar(MAX_INVENTORY);
     }
 
     /**
@@ -50,6 +53,8 @@ public class CoffeeMaker
      */
     public boolean addRecipe(Recipe rAdd)
     {
+        // check if the recipe already exists or if there are already 4 recipies present, do a printout for each and return false
+        this.recipeArray.add(rAdd);
         return false;
     }
 
@@ -98,6 +103,14 @@ public class CoffeeMaker
      */
     public boolean makeCoffee(String recipeName)
     {
+        for (int i = 0; i < this.recipeArray.size(); i++)
+        {
+            if (this.recipeArray.get(i).getRecipeName().equalsIgnoreCase(recipeName))
+            {
+                // repipe found, decrement inventory 
+                this.inventory.getCoffee();
+            }
+        }
         return false;
     }
 
