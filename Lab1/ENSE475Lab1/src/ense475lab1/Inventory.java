@@ -9,7 +9,9 @@ package ense475lab1;
  * @author tdouglas
  *
  */
-public class Inventory {
+public class Inventory
+{
+
     private int milk;
     private int coffee;
     private int sugar;
@@ -17,35 +19,35 @@ public class Inventory {
     /**
      * Constructor
      */
-    public Inventory(){
-    	
-    	milk =0;
-    	coffee =0;
-    	sugar = 0;
+    public Inventory()
+    {
+
+        milk = 0;
+        coffee = 0;
+        sugar = 0;
     }
 
-    
     /**
      * Getter of the property <tt>milk</tt>
      *
      * @return Returns the milk.
      *
      */
-    public int getMilk() {
-    	return milk;
+    public int getMilk()
+    {
+        return milk;
     }
 
     /**
      * Setter of the property <tt>milk</tt>
      *
-     * @param milk
-     *                The milk to set.
+     * @param milk The milk to set.
      *
      */
-    public void setMilk(int milk) {
-    	this.milk = milk;
+    public void setMilk(int milk)
+    {
+        this.milk = milk;
     }
-
 
     /**
      * Getter of the property <tt>coffee</tt>
@@ -53,21 +55,21 @@ public class Inventory {
      * @return Returns the coffee.
      *
      */
-    public int getCoffee() {
-    	return coffee;
+    public int getCoffee()
+    {
+        return coffee;
     }
 
     /**
      * Setter of the property <tt>coffee</tt>
      *
-     * @param coffee
-     *                The coffee to set.
+     * @param coffee The coffee to set.
      *
      */
-    public void setCoffee(int coffee) {
-    	this.coffee = coffee;
+    public void setCoffee(int coffee)
+    {
+        this.coffee = coffee;
     }
-
 
     /**
      * Getter of the property <tt>sugar</tt>
@@ -75,18 +77,19 @@ public class Inventory {
      * @return Returns the sugar.
      *
      */
-    public int getSugar() {
-    	return sugar;
+    public int getSugar()
+    {
+        return sugar;
     }
 
     /**
      * Setter of the property <tt>sugar</tt>
      *
-     * @param sugar
-     *                The sugar to set.
+     * @param sugar The sugar to set.
      *
      */
-    public void setSugar(int sugar) {
-    	this.sugar = sugar;
+    public void setSugar(int sugar)
+    {
+        this.sugar = sugar;
     }
 }

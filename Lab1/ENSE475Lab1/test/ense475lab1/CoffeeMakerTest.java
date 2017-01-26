@@ -18,26 +18,26 @@ import static org.junit.Assert.*;
  */
 public class CoffeeMakerTest
 {
-    
+
     public CoffeeMakerTest()
     {
     }
-    
+
     @BeforeClass
     public static void setUpClass()
     {
     }
-    
+
     @AfterClass
     public static void tearDownClass()
     {
     }
-    
+
     @Before
     public void setUp()
     {
     }
-    
+
     @After
     public void tearDown()
     {
@@ -54,8 +54,7 @@ public class CoffeeMakerTest
         Inventory expResult = null;
         Inventory result = instance.getInventory();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -70,8 +69,6 @@ public class CoffeeMakerTest
         boolean expResult = false;
         boolean result = instance.addRecipe(rAdd);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -86,8 +83,6 @@ public class CoffeeMakerTest
         Recipe expResult = null;
         Recipe result = instance.getRecipe(recipeName);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -102,8 +97,6 @@ public class CoffeeMakerTest
         boolean expResult = false;
         boolean result = instance.deleteRecipe(recipeName);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -118,8 +111,6 @@ public class CoffeeMakerTest
         boolean expResult = false;
         boolean result = instance.makeCoffee(recipeName);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-    
+
 }

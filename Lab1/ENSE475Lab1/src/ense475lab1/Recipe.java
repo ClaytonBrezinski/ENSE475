@@ -9,40 +9,44 @@ package ense475lab1;
  * @author tdouglas
  *
  */
-public class Recipe {
+public class Recipe
+{
+
     private String recipeName;
     private int milkLevel;
     private int sugarLevel;
     private int coffeeLevel;
 
     /**
-     * Recipe constructor representing a Recipe for our
-     * CoffeeMaker.
+     * Recipe constructor representing a Recipe for our CoffeeMaker.
+     *
      * @param recipeName may not be null.
-     * @param milkLevel must be non negative and less than or equal to
-     * the MAX_INVENTORY.  If not true will be set to MAX_INVENTORY
-     * @param sugarLevel must be non negative and less than or equal to
-     * the MAX_INVENTORY.  If not true will be set to MAX_INVENTORY
-     * @param coffeeLevel must be non negative and less than or equal to
-     * the MAX_INVENTORY.  If not true will be set to MAX_INVENTORY
+     * @param milkLevel must be non negative and less than or equal to the
+     * MAX_INVENTORY. If not true will be set to MAX_INVENTORY
+     * @param sugarLevel must be non negative and less than or equal to the
+     * MAX_INVENTORY. If not true will be set to MAX_INVENTORY
+     * @param coffeeLevel must be non negative and less than or equal to the
+     * MAX_INVENTORY. If not true will be set to MAX_INVENTORY
      *
      */
     public Recipe(String recipeName, int milkLevel, int sugarLevel, int coffeeLevel)
     {
-    	this.recipeName = recipeName;
-    	this.milkLevel = milkLevel;
-    	this.sugarLevel = sugarLevel;
-    	this.coffeeLevel = coffeeLevel;
-    	
+        this.recipeName = recipeName;
+        this.milkLevel = milkLevel;
+        this.sugarLevel = sugarLevel;
+        this.coffeeLevel = coffeeLevel;
+
     }
+
     /**
      * Getter of the property <tt>Name</tt>
      *
      * @return Returns the Name.
      *
      */
-    public String getRecipeName() {
-    	return recipeName;
+    public String getRecipeName()
+    {
+        return recipeName;
     }
 
     /**
@@ -51,8 +55,9 @@ public class Recipe {
      * @return Returns the milkLevel.
      *
      */
-    public int getMilkLevel() {
-    	return milkLevel;
+    public int getMilkLevel()
+    {
+        return milkLevel;
     }
 
     /**
@@ -61,8 +66,9 @@ public class Recipe {
      * @return Returns the sugarLevel.
      *
      */
-    public int getSugarLevel() {
-    	return sugarLevel;
+    public int getSugarLevel()
+    {
+        return sugarLevel;
     }
 
     /**
@@ -71,7 +77,8 @@ public class Recipe {
      * @return Returns the coffeeLevel.
      *
      */
-    public int getCoffeeLevel() {
-    	return coffeeLevel;
+    public int getCoffeeLevel()
+    {
+        return coffeeLevel;
     }
 }
