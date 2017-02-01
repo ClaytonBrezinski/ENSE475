@@ -8,16 +8,12 @@ package ense475lab1;
 import java.util.ArrayList;
 
 /**
- Author: tdouglas
- */
-/**
  CoffeeMaker constructor
 
  The inventory should be created and filled up.
  */
 public class CoffeeMaker
 {
-
     public static final int MAX_NUM_RECIPES = 4; // Maximum number of recipes
     public static final int MAX_INVENTORY = 20;
     private ArrayList<Recipe> recipeArray; // This is the array of recipes
@@ -56,8 +52,15 @@ public class CoffeeMaker
     public boolean addRecipe(Recipe rAdd)
     {
         // check if the recipe already exists or if there are already 4 recipies present, do a printout for each and return false
-        this.recipeArray.add(rAdd);
-        return false;
+        if (this.recipeArray.size() < MAX_NUM_RECIPES)
+        {
+            this.recipeArray.add(rAdd);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -114,7 +117,7 @@ public class CoffeeMaker
                 this.inventory.setCoffee(this.inventory.getCoffee() - recipeToUse.getCoffeeLevel());
                 this.inventory.setMilk(this.inventory.getMilk() - recipeToUse.getMilkLevel());
                 this.inventory.setSugar(this.inventory.getSugar() - recipeToUse.getSugarLevel());
-                return true; 
+                return true;
             }
         }
         return false; // could not find the correct recipe 

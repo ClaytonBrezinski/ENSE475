@@ -18,6 +18,7 @@ public class ENSE475Lab1
     public static void main(String[] args)
     {
         // TODO code application logic here
+        CoffeeMaker keurig = new CoffeeMaker();
     }
 
 }
