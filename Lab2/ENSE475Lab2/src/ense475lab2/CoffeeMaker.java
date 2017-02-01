@@ -102,6 +102,22 @@ public class CoffeeMaker
         return false;
     }
 
+    
+    public boolean editARecipe(String recipeName)
+    {
+        return false;
+    }
+    /*
+        for (int i = 0; i < this.recipeArray.size(); i++)
+        {
+            if (this.recipeArray.get(i).getRecipeName().equalsIgnoreCase(recipeName))
+            {
+                return true; 
+            }
+        }
+            return false;
+    }
+    */
     /**
      makeCoffee Method
 
@@ -123,6 +139,10 @@ public class CoffeeMaker
             }
         }
         return false; // could not find the correct recipe 
+    }
+    public boolean AddInventory()
+    {
+        return false;
     }
 
 }
