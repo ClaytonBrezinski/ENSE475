@@ -1,17 +1,19 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ To change this license header, choose License Headers in Project Properties.
+ To change this template file, choose Tools | Templates
+ and open the template in the editor.
  */
 package ense475lab1;
+
 import java.util.ArrayList;
+
 /**
- * Author: tdouglas
+ Author: tdouglas
  */
 /**
- * CoffeeMaker constructor
- *
- * The inventory should be created and filled up.
+ CoffeeMaker constructor
+
+ The inventory should be created and filled up.
  */
 public class CoffeeMaker
 {
@@ -23,8 +25,8 @@ public class CoffeeMaker
     private Inventory inventory; // This is our inventory in the coffee maker
 
     /**
-     * Constructor for the coffee maker The inventory should be created and
-     * filled.
+     Constructor for the coffee maker The inventory should be created and
+     filled.
      */
     public CoffeeMaker()
     {
@@ -33,14 +35,12 @@ public class CoffeeMaker
         this.inventory.setCoffee(MAX_INVENTORY);
         this.inventory.setMilk(MAX_INVENTORY);
         this.inventory.setSugar(MAX_INVENTORY);
-        
-        
     }
 
     /**
-     * Getter of the property <tt>inventory</tt>
-     *
-     * @return Returns the inventory.
+     Getter of the property <tt>inventory</tt>
+
+     @return Returns the inventory.
      */
     public Inventory getInventory()
     {
@@ -48,10 +48,10 @@ public class CoffeeMaker
     }
 
     /**
-     * addRecipe Method
-     *
-     * @param Recipe Will add a recipe if possible
-     * @return true or false
+     addRecipe Method
+
+     @param Recipe Will add a recipe if possible
+     @return true or false
      */
     public boolean addRecipe(Recipe rAdd)
     {
@@ -61,10 +61,10 @@ public class CoffeeMaker
     }
 
     /**
-     * getRecipe Method
-     *
-     * @param Recipe name String
-     * @return Recipe or NULL
+     getRecipe Method
+
+     @param Recipe name String
+     @return Recipe or NULL
      */
     public Recipe getRecipe(String recipeName)
     {
@@ -79,10 +79,10 @@ public class CoffeeMaker
     }
 
     /**
-     * deleteRecipe Method
-     *
-     * @param Recipe Will delete a recipe if possible
-     * @return true or false
+     deleteRecipe Method
+
+     @param Recipe Will delete a recipe if possible
+     @return true or false
      */
     public boolean deleteRecipe(String recipeName)
     {
@@ -98,10 +98,10 @@ public class CoffeeMaker
     }
 
     /**
-     * makeCoffee Method
-     *
-     * @param recipeName Will make the coffee if the recipe is there
-     * @return true or false
+     makeCoffee Method
+
+     @param recipeName Will make the coffee if the recipe is there
+     @return true or false
      */
     public boolean makeCoffee(String recipeName)
     {
@@ -114,11 +114,10 @@ public class CoffeeMaker
                 this.inventory.setCoffee(this.inventory.getCoffee() - recipeToUse.getCoffeeLevel());
                 this.inventory.setMilk(this.inventory.getMilk() - recipeToUse.getMilkLevel());
                 this.inventory.setSugar(this.inventory.getSugar() - recipeToUse.getSugarLevel());
-                             
-                this.inventory.getCoffee();
+                return true; 
             }
         }
-        return false;
+        return false; // could not find the correct recipe 
     }
 
 }
