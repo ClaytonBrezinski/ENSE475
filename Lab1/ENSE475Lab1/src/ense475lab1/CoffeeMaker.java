@@ -110,11 +110,11 @@ public class CoffeeMaker
             Recipe recipeToUse = this.recipeArray.get(i);
             if (recipeToUse.getRecipeName().equalsIgnoreCase(recipeName))
             {
-                recipeToUse.getCoffeeLevel();
-                recipeToUse.getMilkLevel();
-                recipeToUse.getSugarLevel();
                 // repipe found, decrement inventory 
-                
+                this.inventory.setCoffee(this.inventory.getCoffee() - recipeToUse.getCoffeeLevel());
+                this.inventory.setMilk(this.inventory.getMilk() - recipeToUse.getMilkLevel());
+                this.inventory.setSugar(this.inventory.getSugar() - recipeToUse.getSugarLevel());
+                             
                 this.inventory.getCoffee();
             }
         }
