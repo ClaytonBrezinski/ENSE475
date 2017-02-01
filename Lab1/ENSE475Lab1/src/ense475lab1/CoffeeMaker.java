@@ -16,7 +16,7 @@ public class CoffeeMaker
 {
     public static final int MAX_NUM_RECIPES = 4; // Maximum number of recipes
     public static final int MAX_INVENTORY = 20;
-    private ArrayList<Recipe> recipeArray; // This is the array of recipes
+    private ArrayList<Recipe> recipeArray = new ArrayList<Recipe>(); // This is the array of recipes
     private int numRecipes = 0;
     private Inventory inventory; // This is our inventory in the coffee maker
 
@@ -42,7 +42,7 @@ public class CoffeeMaker
     {
         return inventory;
     }
-
+    
     /**
      addRecipe Method
 
@@ -52,9 +52,10 @@ public class CoffeeMaker
     public boolean addRecipe(Recipe rAdd)
     {
         // check if the recipe already exists or if there are already 4 recipies present, do a printout for each and return false
-        if (this.recipeArray.size() < MAX_NUM_RECIPES)
+        if (this.numRecipes < MAX_NUM_RECIPES)
         {
             this.recipeArray.add(rAdd);
+            this.numRecipes++;
             return true;
         }
         else
@@ -94,6 +95,7 @@ public class CoffeeMaker
             if (this.recipeArray.get(i).getRecipeName().equalsIgnoreCase(recipeName))
             {
                 this.recipeArray.remove(i);
+                this.numRecipes--;
                 return true;
             }
         }
