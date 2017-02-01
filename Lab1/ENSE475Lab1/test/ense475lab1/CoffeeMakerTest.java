@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ To change this license header, choose License Headers in Project Properties.
+ To change this template file, choose Tools | Templates
+ and open the template in the editor.
  */
 package ense475lab1;
 
@@ -13,8 +13,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- *
- * @author clayt
+
+ @author clayt
  */
 public class CoffeeMakerTest
 {
@@ -23,70 +23,8 @@ public class CoffeeMakerTest
     {
     }
 
-    @BeforeClass
-    public static void setUpClass()
-    {
-    }
-
-    @AfterClass
-    public static void tearDownClass()
-    {
-    }
-
-    @Before
-    public void setUp()
-    {
-    }
-
-    @After
-    public void tearDown()
-    {
-    }
-
     /**
-     * Test of getInventory method, of class CoffeeMaker.
-     */
-    @Test
-    public void testGetInventory()
-    {
-        System.out.println("getInventory");
-        CoffeeMaker instance = new CoffeeMaker();
-        Inventory expResult = null;
-        Inventory result = instance.getInventory();
-        assertEquals(expResult, result);
-        
-    }
-
-    /**
-     * Test of addRecipe method, of class CoffeeMaker.
-     */
-    @Test
-    public void testAddRecipe()
-    {
-        System.out.println("addRecipe");
-        Recipe rAdd = null;
-        CoffeeMaker instance = new CoffeeMaker();
-        boolean expResult = false;
-        boolean result = instance.addRecipe(rAdd);
-        assertEquals(expResult, result);
-    }
-
-    /**
-     * Test of getRecipe method, of class CoffeeMaker.
-     */
-    @Test
-    public void testGetRecipe()
-    {
-        System.out.println("getRecipe");
-        String recipeName = "";
-        CoffeeMaker instance = new CoffeeMaker();
-        Recipe expResult = null;
-        Recipe result = instance.getRecipe(recipeName);
-        assertEquals(expResult, result);
-    }
-
-    /**
-     * Test of deleteRecipe method, of class CoffeeMaker.
+     Test of deleteRecipe method, of class CoffeeMaker.
      */
     @Test
     public void testDeleteRecipe()
@@ -100,16 +38,70 @@ public class CoffeeMakerTest
     }
 
     /**
-     * Test of makeCoffee method, of class CoffeeMaker.
+     Test of makeCoffee method, of class CoffeeMaker.
      */
     @Test
     public void testMakeCoffee()
     {
         System.out.println("makeCoffee");
-        String recipeName = "";
+        Recipe a = new Recipe("a", 1, 1, 1);
         CoffeeMaker instance = new CoffeeMaker();
+        instance.addRecipe(a);
+        
+        boolean expResult = true;
+        boolean result = instance.makeCoffee(a.getRecipeName());
+        assertEquals(expResult, result);       
+        
+        assertEquals(instance.MAX_INVENTORY - 1, instance.getInventory().getCoffee());
+        assertEquals(instance.MAX_INVENTORY - 1, instance.getInventory().getMilk());
+        assertEquals(instance.MAX_INVENTORY - 1, instance.getInventory().getSugar());
+    }
+
+    @Test
+    public void testAdd4Recipes()
+    {
+        System.out.println("testAdd4Recipes");
+        Recipe a = new Recipe("a", 2, 2, 2);
+        Recipe b = new Recipe("b", 1, 1, 1);
+        Recipe c = new Recipe("c", 0, 0, 2);
+        Recipe d = new Recipe("d", 3, 0, 0);
+
+        CoffeeMaker instance = new CoffeeMaker();
+
+        instance.addRecipe(a);
+        instance.addRecipe(b);
+        instance.addRecipe(c);
+        instance.addRecipe(d);
+
+        Recipe result = instance.getRecipe(a.getRecipeName());
+        assertEquals(a, result);
+        result = instance.getRecipe(b.getRecipeName());
+        assertEquals(b, result);
+        result = instance.getRecipe(c.getRecipeName());
+        assertEquals(c, result);
+        result = instance.getRecipe(d.getRecipeName());
+        assertEquals(d, result);
+    }
+
+    @Test
+    public void testAdd5Recipes()
+    {
+        System.out.println("testAdd5Recipes");
+        Recipe a = new Recipe("a", 2, 2, 2);
+        Recipe b = new Recipe("b", 1, 1, 1);
+        Recipe c = new Recipe("c", 0, 0, 2);
+        Recipe d = new Recipe("d", 3, 0, 0);
+        Recipe e = new Recipe("d", 3, 3, 3);
+
+        CoffeeMaker instance = new CoffeeMaker();
+
+        instance.addRecipe(a);
+        instance.addRecipe(b);
+        instance.addRecipe(c);
+        instance.addRecipe(d);
+        boolean result = instance.addRecipe(e);
         boolean expResult = false;
-        boolean result = instance.makeCoffee(recipeName);
+        
         assertEquals(expResult, result);
     }
 

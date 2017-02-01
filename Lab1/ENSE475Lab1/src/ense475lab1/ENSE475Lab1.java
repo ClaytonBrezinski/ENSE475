@@ -17,7 +17,19 @@ public class ENSE475Lab1
      */
     public static void main(String[] args)
     {
-        // TODO code application logic here
+        Recipe a = new Recipe("double Double", 2, 2, 2);
+        Recipe b = new Recipe("regular", 1, 1, 1);
+        Recipe c = new Recipe("black", 0, 0, 2);
+        Recipe d = new Recipe("milk", 3, 0, 0);
+        Recipe e = new Recipe("abomination", 3, 3, 2);
+        
+        CoffeeMaker keurig = new CoffeeMaker();
+        
+        keurig.addRecipe(a);
+        keurig.addRecipe(b);
+        keurig.addRecipe(c);
+        keurig.addRecipe(d);
+        keurig.addRecipe(e);
     }
 
 }
