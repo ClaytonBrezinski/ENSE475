@@ -103,7 +103,7 @@ public class CoffeeMaker
     }
 
     
-    public boolean editARecipe(String recipeName)
+    public boolean editRecipe(Recipe recipe)
     {
         return false;
     }
@@ -140,7 +140,8 @@ public class CoffeeMaker
         }
         return false; // could not find the correct recipe 
     }
-    public boolean AddInventory()
+    
+    public boolean addInventory(Inventory inventory)
     {
         return false;
     }
