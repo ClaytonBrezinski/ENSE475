@@ -16,6 +16,9 @@ public class Recipe
     private int milkLevel;
     private int sugarLevel;
     private int coffeeLevel;
+    private int vanillaExtractLevel;
+    private int chocolateSyrupLevel;
+    private int cocoaLevel;
 
     /**
      * Recipe constructor representing a Recipe for our CoffeeMaker.
@@ -29,14 +32,17 @@ public class Recipe
      * MAX_INVENTORY. If not true will be set to MAX_INVENTORY
      *
      */
-    public Recipe(String recipeName, int milkLevel, int sugarLevel, int coffeeLevel)
+    public Recipe(String recipeName, int milkLevel, int sugarLevel, int coffeeLevel, int vanillaExtractLevel, int chocolateSyrupLevel, int cocoaLevel)
     {
         this.recipeName = recipeName;
         this.milkLevel = milkLevel;
         this.sugarLevel = sugarLevel;
         this.coffeeLevel = coffeeLevel;
+        this.vanillaExtractLevel = vanillaExtractLevel;
+        this.chocolateSyrupLevel = chocolateSyrupLevel;
+        this.cocoaLevel = cocoaLevel;
     }
-            
+
     /**
      * Getter of the property <tt>Name</tt>
      *
@@ -79,5 +85,20 @@ public class Recipe
     public int getCoffeeLevel()
     {
         return coffeeLevel;
+    }
+
+    public int getVanillaExtractLevel()
+    {
+        return vanillaExtractLevel;
+    }
+
+    public int getChocolateSyrupLevel()
+    {
+        return chocolateSyrupLevel;
+    }
+
+    public int getCocoaLevel()
+    {
+        return cocoaLevel;
     }
 }

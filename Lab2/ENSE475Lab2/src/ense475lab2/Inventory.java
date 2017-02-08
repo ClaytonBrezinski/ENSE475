@@ -15,6 +15,9 @@ public class Inventory
     private int milk;
     private int coffee;
     private int sugar;
+    private int chocolateSyrup;
+    private int vanillaExtract;
+    private int cocoa;
 
     /**
      * Constructor
@@ -24,6 +27,8 @@ public class Inventory
         milk = 0;
         coffee = 0;
         sugar = 0;
+        chocolateSyrup = 0;
+        vanillaExtract = 0;
     }
 
     /**
@@ -90,5 +95,35 @@ public class Inventory
     public void setSugar(int sugar)
     {
         this.sugar = sugar;
+    }
+
+    public int getChocolateSyrup()
+    {
+        return chocolateSyrup;
+    }
+
+    public void setChocolateSyrup(int chocolateSyrup)
+    {
+        this.chocolateSyrup = chocolateSyrup;
+    }
+
+    public int getVanillaExtract()
+    {
+        return vanillaExtract;
+    }
+
+    public void setVanillaExtract(int vanillaExtract)
+    {
+        this.vanillaExtract = vanillaExtract;
+    }
+    
+    public int getCocoa()
+    {
+        return cocoa;
+    }
+
+    public void setCocoa(int cocoa)
+    {
+        this.cocoa = cocoa;
     }
 }

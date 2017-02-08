@@ -40,7 +40,7 @@ public class CoffeeMakerTest {
     @Test
     public void testMakeCoffee() {
         System.out.println("makeCoffee");
-        Recipe a = new Recipe("a", 1, 1, 1);
+        Recipe a = new Recipe("a", 1, 1, 1, 0, 0, 0);
         CoffeeMaker instance = new CoffeeMaker();
         instance.addRecipe(a);
 
@@ -56,10 +56,10 @@ public class CoffeeMakerTest {
     @Test
     public void testAdd4Recipes() {
         System.out.println("testAdd4Recipes");
-        Recipe a = new Recipe("a", 2, 2, 2);
-        Recipe b = new Recipe("b", 1, 1, 1);
-        Recipe c = new Recipe("c", 0, 0, 2);
-        Recipe d = new Recipe("d", 3, 0, 0);
+        Recipe a = new Recipe("a", 2, 2, 2, 0, 0, 0);
+        Recipe b = new Recipe("b", 1, 1, 1, 0, 0, 0);
+        Recipe c = new Recipe("c", 0, 0, 2, 0, 0, 0);
+        Recipe d = new Recipe("d", 3, 0, 0, 0, 0, 0);
 
         CoffeeMaker instance = new CoffeeMaker();
 
@@ -81,11 +81,11 @@ public class CoffeeMakerTest {
     @Test
     public void testAdd5Recipes() {
         System.out.println("testAdd5Recipes");
-        Recipe a = new Recipe("a", 2, 2, 2);
-        Recipe b = new Recipe("b", 1, 1, 1);
-        Recipe c = new Recipe("c", 0, 0, 2);
-        Recipe d = new Recipe("d", 3, 0, 0);
-        Recipe e = new Recipe("d", 3, 3, 3);
+        Recipe a = new Recipe("a", 2, 2, 2, 0, 0, 0);
+        Recipe b = new Recipe("b", 1, 1, 1, 0, 0, 0);
+        Recipe c = new Recipe("c", 0, 0, 2, 0, 0, 0);
+        Recipe d = new Recipe("d", 3, 0, 0, 0, 0, 0);
+        Recipe e = new Recipe("d", 3, 3, 3, 0, 0, 0);
 
         CoffeeMaker instance = new CoffeeMaker();
 
@@ -102,8 +102,8 @@ public class CoffeeMakerTest {
     @Test
     public void testEditRecipe() {
         System.out.println("testEditRecipe");
-        Recipe a = new Recipe("a", 2, 2, 2);
-        Recipe b = new Recipe("b", 1, 1, 1);
+        Recipe a = new Recipe("a", 2, 2, 2, 0, 0, 0);
+        Recipe b = new Recipe("b", 1, 1, 1, 0, 0, 0);
 
         CoffeeMaker instance = new CoffeeMaker();
 
